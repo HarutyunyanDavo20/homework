@@ -13,8 +13,16 @@ console.log(digitsCount(-75694))
 
 function digit9 (val) {
 
-    let splitArr = val.toString().split('') 
-    return splitArr.filter((val)=> val === '9').length
+    let splitArr = val.toString()
+    let count = 0;
+
+    for(let i = 0; i< splitArr.length ; i++){
+        if(splitArr[i] === '9'){
+            count++
+        }
+    }
+
+    return count
     
 }
 
@@ -73,9 +81,9 @@ function checkArmstrongNumber (val) {
     }
 
     if(count === val){
-        console.log('yes')
+        return 'yes'
     }else{
-        console.log('no')
+        return'no' 
     }
 }
 
